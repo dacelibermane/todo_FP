@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  /* Šo pievienoju, jo gradiant sākotnēji atkartoj;as, bet uzliekot no-repeat background neizstiepās visas lapas garumā. */
+}
+
+body {
+  background: rgb(247, 213, 102);
+  background: radial-gradient(
+    circle,
+    rgba(247, 213, 102, 1) 0%,
+    rgba(216, 135, 113, 1) 35%
+  );
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+}
+
+h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 46px;
+  width: 400px;
+  margin: 0 auto;
+  align-items: center;
+  padding: 30px 10px;
+  color: rgb(249, 250, 208);
+  text-shadow: 4px 2px #270935;
+}
+
+h1 i {
+  margin-right: 10px;
+  text-shadow: 3px 3px #270935;
+}
+
+.main-todo {
+  /* background-color: rgba(247, 213, 102, 1); */
+  opacity: 0.6;
+  max-width: 600px;
+  width: 90%;
+  height: 500px;
+  margin: 20px auto;
+  border-radius: 15px;
+}
+
+.add-todo {
+  width: 100%;
+  background-color: rgba(247, 213, 102, 1);
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.add-todo input {
+  display: block;
+  width: 95%;
+  height: 40px;
+  margin: 10px auto;
+  /* margin iecentrē input lauku */
+  border: 3px solid aliceblue;
+  border-radius: 2px;
+  padding: 0px 7px;
+  outline: none;
+  /* outline none, lai uzspiežot neieziemētos laukums ar melnu border */
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+}
+
+.add-todo i {
+  margin: 0 5px;
+}
+
+#addBtn {
+  display: block;
+  width: 20%;
+  /* width lai poga izstieptos input garumā */
+  margin: 0 auto;
+  margin-top: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 3px 8px;
+  color: rgb(20, 12, 92);
+}
+
+#addBtn:hover {
+  color: aliceblue;
+  background-color: rgb(20, 12, 92);
+  /* opacity: 0.7; */
+}
+
+.show-todo {
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.todo-item {
+  width: 95%;
+  margin: 10px auto;
+  padding: 12px 7px;
+  background-color: rgb(247, 219, 142);
+  box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
+  border-radius: 4px;
+}
+
+/* .todo-item input {
+  color: rgb(127, 125, 150);
+} */
+
+.todo-item h2 {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  padding: 5px 0px;
+  color: #270935;
+}
+
+.todo-item small {
+  display: block;
+  width: 100%;
+  padding: 5px 0px;
+  color: #270935;
+  padding-left: 30px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.edit-todo {
+  display: block;
+  float: right;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+  color: #270935;
+}
+
+.remove-todo {
+  display: block;
+  float: right;
+  cursor: pointer;
+  padding: 5px;
+  text-decoration: none;
+  color: #270935;
+}
+
+.show-removed-todo {
+  display: none;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+#deleteTodoItem {
+  width: 95%;
+  margin: 0 auto;
+  padding: 5px 15px;
+}
+
+#deleteTodoItem h2 {
+  display: inline-block;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 5px 0px;
+  color: rgb(88, 12, 85);
+  text-decoration: line-through;
+}
+
+.delete-todo {
+  display: block;
+  float: left;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px;
+  color: rgb(88, 12, 85);
+}
+
+.edit-todo:hover {
+  color: rgb(36, 238, 53);
+}
+
+.remove-todo:hover,
+.delete-todo:hover {
+  color: rgb(230, 49, 73);
+}
+
+/* .checked {
+  font-size: 16px;
+  color: rgb(238, 204, 91) !important;
+  text-decoration: line-through;
+} */
