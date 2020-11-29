@@ -9,7 +9,7 @@ if (isset($_GET["id"])) {
 
   DB::run($deleteSql);
 
-  $_SESSION['message'] = "Your Todo has been deleted";
+  $_SESSION['message'] = "Your Todo has been deleted!";
   $_SESSION['msg_type'] = "danger";
   Header("Location: index.php");
 }

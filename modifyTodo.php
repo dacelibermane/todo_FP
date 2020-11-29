@@ -17,7 +17,7 @@ if (!empty($_POST["title"])) {
   $updateSql = "UPDATE todos SET title='$title' WHERE id=$id";
 
   DB::run($updateSql);
-  Header("Location: index.php");
+  Header("Location: /todo_FP/todo_FP/index.php");
 }
 ?>
 
@@ -32,7 +32,7 @@ if (!empty($_POST["title"])) {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" href="assets/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="assets/main.js"></script>
+  <script src="assets/index.js"></script>
 </head>
 
 <body>
@@ -40,7 +40,7 @@ if (!empty($_POST["title"])) {
   <main class="main-todo">
     <div class="add-todo">
       <form action="modifyTodo.php" method="POST">
-        <input name="title" value="<?= $todo['title'] ?>">
+        <input name="title" id="todoInput" autocomplete="off" value="<?= $todo['title'] ?>">
         <input type="hidden" name="id" value=" <?= $todo["id"] ?>">
         <button type="submit" name="save" id="addBtn">Update</button>
       </form>

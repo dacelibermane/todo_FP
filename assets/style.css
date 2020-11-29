@@ -79,7 +79,8 @@ h1 i {
 }
 
 #addBtn {
-  display: block;
+  display: none;
+  /* display: block; */
   width: 20%;
   /* width lai poga izstieptos input garumā */
   margin: 0 auto;

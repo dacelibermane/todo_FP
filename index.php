@@ -39,7 +39,7 @@ $todos = DB::run($sql)->fetch_all(MYSQLI_ASSOC);
       <div class="add-todo">
         <form action="addTodo.php" method="POST">
 
-          <input name="title" id="todoInput" placeholder="Enter your todo">
+          <input name="title" id="todoInput" autocomplete="off" placeholder="Enter your todo">
           <button type="submit" id="addBtn" name="save"><i class="fas fa-plus-square"></i>Todo</button>
         </form>
       </div>
@@ -47,9 +47,9 @@ $todos = DB::run($sql)->fetch_all(MYSQLI_ASSOC);
         <?php foreach ($todos as $todo) { ?>
           <div class="todo-item">
             <div class="edit">
-              <a href="/todo_FP/modifyTodo.php?id=<?= $todo["id"] ?>" class="edit-todo"><i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i></a></div>
+              <a href="/todo_FP/todo_FP/modifyTodo.php?id=<?= $todo["id"] ?>" class="edit-todo"><i class="fas fa-edit" data-toggle="tooltip" data-placement="bottom" title="Edit"></i></a></div>
             <div class="delete"></div>
-            <a href="/todo_FP/deleteTodo.php?id=<?= $todo["id"] ?>" class="remove-todo">
+            <a href="/todo_FP/todo_FP/deleteTodo.php?id=<?= $todo["id"] ?>" class="remove-todo">
               <i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>
             <input type="checkbox" class="checkbox">
             <h2><?= $todo["title"] ?></h2>
@@ -58,7 +58,7 @@ $todos = DB::run($sql)->fetch_all(MYSQLI_ASSOC);
         <?php } ?>
         <div class="show-removed-todo">
           <div id="deleteTodoItem">
-            <a href="/todo_FP/deleteTodo.php?id=<?= $todo["id"] ?>" class="delete-todo"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>
+            <a href="/todo_FP/todo_FP/deleteTodo.php?id=<?= $todo["id"] ?>" class="delete-todo"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="bottom" title="Delete"></i></a>
             <h2><?= $todo["title"] ?></h2>
           </div>
         </div>
