@@ -4,6 +4,7 @@
 require_once __DIR__ . "/helpers/database-wrapper.php";
 require_once __DIR__ . "/process.php";
 
+
 /* atspoguļo datu bāzē esošos ierakstus*/
 $sql = "SELECT * FROM todos ORDER BY id DESC";
 $todos = DB::run($sql)->fetch_all(MYSQLI_ASSOC);
@@ -42,7 +43,7 @@ $todos = DB::run($sql)->fetch_all(MYSQLI_ASSOC);
   <main class="main-todo">
     <div class="add-todo">
       <form action="addTodo.php" method="POST">
-        <input name="title" id="todoInput" autocomplete="off" placeholder="Enter your todo">
+        <input name="title" id="todoInput" placeholder="Enter your todo">
         <button type="submit" id="addBtn" name="save"><i class="fas fa-plus-square"></i>Todo</button>
       </form>
     </div>
