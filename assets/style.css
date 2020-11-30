@@ -19,9 +19,6 @@ body {
 }
 
 header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0.7;
 }
 
@@ -32,21 +29,22 @@ h1 {
   margin: 0 auto;
   align-items: center;
   padding: 30px 10px;
-  color: rgb(249, 250, 208);
-  text-shadow: 4px 2px #270935;
+  color: #3e194e;
+  text-shadow: 2px 1px rgb(249, 250, 208);
+  opacity: 0.9;
 }
 
 h1 i {
   margin-right: 10px;
-  text-shadow: 3px 3px #270935;
+  text-shadow: 1px 1px rgb(249, 250, 208);
 }
 
 .main-todo {
-  /* background-color: rgba(247, 213, 102, 1); */
   opacity: 0.6;
-  max-width: 600px;
+  max-width: 500px;
   width: 90%;
-  height: 500px;
+  height: auto;
+  /* height: 500px; */
   margin: 20px auto;
   border-radius: 15px;
 }
@@ -78,11 +76,9 @@ h1 i {
   margin: 0 5px;
 }
 
-#addBtn {
-  display: none;
-  /* display: block; */
+#addBtn,
+#updateBtn {
   width: 20%;
-  /* width lai poga izstieptos input garumā */
   margin: 0 auto;
   margin-top: 10px;
   border: none;
@@ -96,7 +92,16 @@ h1 i {
   color: rgb(20, 12, 92);
 }
 
-#addBtn:hover {
+#addBtn {
+  display: block;
+}
+
+#updateBtn {
+  display: none;
+}
+
+#addBtn:hover,
+#updateBtn:hover {
   color: aliceblue;
   background-color: rgb(20, 12, 92);
   /* opacity: 0.7; */
@@ -114,13 +119,8 @@ h1 i {
   margin: 10px auto;
   padding: 12px 7px;
   background-color: rgb(247, 219, 142);
-  box-shadow: 0 4px 8px 0 #ccc, 0 6px 20px 0 #ccc;
   border-radius: 4px;
 }
-
-/* .todo-item input {
-  color: rgb(127, 125, 150);
-} */
 
 .todo-item h2 {
   display: inline-block;
@@ -141,15 +141,7 @@ h1 i {
   font-family: sans-serif;
 }
 
-.edit-todo {
-  display: block;
-  float: right;
-  cursor: pointer;
-  padding: 5px;
-  text-decoration: none;
-  color: #270935;
-}
-
+.edit-todo,
 .remove-todo {
   display: block;
   float: right;
@@ -173,7 +165,7 @@ h1 i {
 }
 
 #deleteTodoItem h2 {
-  display: inline-block;
+  display: inline;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 100;
@@ -200,8 +192,7 @@ h1 i {
   color: rgb(230, 49, 73);
 }
 
-/* .checked {
-  font-size: 16px;
-  color: rgb(238, 204, 91) !important;
-  text-decoration: line-through;
-} */
+.empty img {
+  width: 100%;
+  border-radius: 7px;
+}

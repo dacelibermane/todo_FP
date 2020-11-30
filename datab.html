@@ -7,17 +7,3 @@ date DATETIME DEFAULT CURRENT_TIMESTAMP,
 checked TINYINT NOT NULL DEFAULT 1,
 PRIMARU KEY (id)
 )
-
-INSERT INTO `todos` (title) VALUES ('Make a dentist appointment', 'Fix the bicycle', 'Feed the dog'); - - - -ŠO JĀPĀRBAUDA
-
-// $dbhost = "localhost:3306";
-// $dbuser = "root";
-// $dbpass = "";
-// $dbname = "todo_list";
-// $dbConnection = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
-// ŠOBRĪD SAVIENOJUMS IR ATVĒRTS, BET TO VAJADZĒTU ARĪ AIZVĒRT. DATABASE WRAPPER IR AIZVĒRTS SAVIENOJUMS.
-
-ilgi nesanāca pievienot ierakstu datu bāzei, ievadu tekstu, nospiežu podu, bet man izmet error - SQL error: Unknown column 'sdfghj' in 'field list'....visādi ņēmos skatījos vairrākkārt video un tikai pēc ilga laika sapratu, ka neesmu ielikusi mainīgo pēdiņās 
-$addSql = "INSERT INTO todos (title) VALUES ('$title')";
-
-ilgi nevarēju saprast kādēļ nospiežot update pogu nekas nenotiek, dati netiek nodoti ....izrādījās, ka html tagu button biju izveodjusi ārpus formas....pagāja ļoti ilgs laiks līdz to sapratu

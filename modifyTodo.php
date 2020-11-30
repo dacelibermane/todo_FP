@@ -42,7 +42,7 @@ if (!empty($_POST["title"])) {
       <form action="modifyTodo.php" method="POST">
         <input name="title" id="todoInput" autocomplete="off" value="<?= $todo['title'] ?>">
         <input type="hidden" name="id" value=" <?= $todo["id"] ?>">
-        <button type="submit" name="save" id="addBtn">Update</button>
+        <button type="submit" name="save" id="updateBtn">Update</button>
       </form>
 
 </body>

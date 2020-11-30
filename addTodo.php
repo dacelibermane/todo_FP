@@ -15,6 +15,6 @@ if (!empty($_POST['title'])) {
   Header("Location: index.php");
 } else {
   $_SESSION['message'] = "You must enter todo!";
-  $_SESSION['msg_type'] = "warning";
+  $_SESSION['msg_type'] = "danger";
   Header("Location: index.php");
 }
